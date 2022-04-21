@@ -128,7 +128,7 @@ public class medicinesServiceImpl implements medicinesService {
 			return null;
 		}
 		@Override
-		public String checkexp(int medid) throws ParseException {
+		public List checkexp(int medid) throws ParseException {
 			// TODO Auto-generated method stub
 			List<medicines> l=repo.findAll();
 	        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -144,7 +144,7 @@ public class medicinesServiceImpl implements medicinesService {
 				}
 			}
 			
-			return "Medicine not present in the id";
+			return "Medicine is not present in the id";
 		}
 		@Override
 		public HashMap<String,String> checkexpbyname(USER1 u) throws ParseException {
